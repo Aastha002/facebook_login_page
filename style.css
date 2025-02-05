@@ -3,6 +3,7 @@ body {
     background-color: #f0f2f5;
     text-align: center;
     margin: 0;
+    padding: 0;
 }
 
 .logo {
@@ -16,25 +17,28 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
 }
 
-
-.login-box {
+.login-box, .signup-box {
     background: white;
     padding: 20px;
-    width: 360px;
+    width: 100%;
+    max-width: 400px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
 }
 
-.login-box h2 {
-    font-size: 18px;
+.login-box h2, .signup-box h2 {
+    font-size: 20px;
     margin-bottom: 15px;
 }
 
-.login-box input {
-    width: 92%;
+input, select {
+    width: 100%;
     padding: 12px;
     margin: 8px 0;
     border: 1px solid #ccc;
@@ -42,10 +46,8 @@ body {
     font-size: 16px;
 }
 
-.login-btn {
+.login-btn, .signup-btn {
     width: 100%;
-    background: #1877f2;
-    color: white;
     font-size: 18px;
     border: none;
     padding: 12px;
@@ -54,6 +56,15 @@ body {
     margin-top: 10px;
 }
 
+.login-btn {
+    background: #1877f2;
+    color: white;
+}
+
+.signup-btn {
+    background: #42b72a;
+    color: white;
+}
 
 .forgot-signup {
     margin-top: 12px;
@@ -67,130 +78,62 @@ body {
 .forgot-signup a {
     color: #1877f2;
     text-decoration: none;
-    display: inline;
 }
 
 .forgot-signup a:hover {
     text-decoration: underline;
 }
 
-
-
-
-.signup-box {
-    background: white;
-    padding: 20px;
-    width: 430px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-    text-align: left;
-}
-
-.signup-box h2 {
-    font-size: 22px;
-    text-align: center;
-}
-
-.signup-box p {
-    font-size: 14px;
-    text-align: center;
-}
-
-/* Name Fields */
 .name-fields {
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
-    margin-bottom: 10px;
 }
 
 .name-fields input {
     flex: 1;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 16px;
 }
 
-/* Labels */
-label {
-    font-size: 14px;
-    font-weight: bold;
-    margin: 5px 0;
-}
-
-/* Date of Birth Fields */
-.dob-fields {
+.dob-fields, .gender-options {
     display: flex;
     gap: 5px;
-    margin-bottom: 10px;
+    flex-wrap: wrap;
 }
 
-.dob-fields select {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 16px;
-}
-
-/* Gender Options */
-.gender-options {
-    display: flex;
-    gap: 15px;
-    margin-bottom: 10px;
-}
-
-.gender-options label {
-    font-size: 16px;
-}
-
-/* Signup Form Inputs */
-.signup-box input {
-    width: 95%;
-    padding: 12px;
-    margin: 8px 0;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 16px;
-}
-
-/* Policy & Terms */
-.policy-text,
-.terms {
+.policy-text, .terms {
     font-size: 12px;
     color: #606770;
     margin-top: 5px;
 }
 
-.policy-text a,
-.terms a {
+.policy-text a, .terms a {
     color: #1877f2;
     text-decoration: none;
 }
 
-/* Signup Button */
-.signup-btn {
-    width: 100%;
-    background: #42b72a;
-    color: white;
-    font-size: 18px;
-    border: none;
-    padding: 12px;
-    border-radius: 6px;
-    cursor: pointer;
-    margin-top: 10px;
-}
+@media (max-width: 600px) {
+    .logo {
+        font-size: 30px;
+    }
 
-/* Already Have an Account */
-.already-account {
-    text-align: center;
-    margin-top: 15px;
-}
+    .container {
+        padding: 10px;
+    }
 
-.already-account a {
-    color: #1877f2;
-    font-size: 14px;
-    text-decoration: none;
+    .login-box, .signup-box {
+        width: 90%;
+    }
+
+    .name-fields {
+        flex-direction: column;
+    }
+
+    .dob-fields, .gender-options {
+        flex-direction: column;
+    }
+
+    input, select {
+        width: 100%;
+    }
 }
 
