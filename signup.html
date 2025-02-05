@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook - Sign Up</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        
+        <h1 class="logo">facebook</h1>
+        
+        <div class="signup-box">
+            <h2>Create a new account</h2>
+            <p>It's quick and easy.</p>
+            <form>
+                <div class="name-fields">
+                    <input type="text" placeholder="First name" required>
+                    <input type="text" placeholder="Surname" required>
+                </div>
+                
+                <label for="dob-day">Date of birth</label>
+                <div class="dob-fields">
+                    <label for="dob-day">Day</label>
+                    <select id="dob-day" name="dob-day" title="Day of birth">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option selected>4</option>
+                        <option>5</option>
+                    </select>
+
+                    <label for="dob-month">Month</label>
+                    <select id="dob-month" name="dob-month" title="Month of birth">
+                        <option>Jan</option>
+                        <option selected>Feb</option>
+                        <option>Mar</option>
+                        <option>Apr</option>
+                        <option>May</option>
+                    </select>
+
+                    <label for="dob-year">Year</label>
+                    <select id="dob-year" name="dob-year" title="Year of birth">
+                        <option>2023</option>
+                        <option>2024</option>
+                        <option selected>2025</option>
+                        <option>2026</option>
+                        <option>2027</option>
+                    </select>
+                </div>
+
+                <label for="gender">Gender</label>
+                <div class="gender-options">
+                    <label><input type="radio" name="gender" value="female"> Female</label>
+                    <label><input type="radio" name="gender" value="male"> Male</label>
+                    <label><input type="radio" name="gender" value="custom"> Custom</label>
+                </div>
+
+                <input type="email" placeholder="Mobile number or email address" required>
+                <input type="password" placeholder="New password" required>
+
+                <p class="policy-text">
+                    People who use our service may have uploaded your contact information to Facebook. 
+                    <a href="#">Learn more</a>.
+                </p>
+
+                <p class="terms">
+                    By clicking Sign Up, you agree to our <a href="#">Terms</a>, 
+                    <a href="#">Privacy Policy</a> and <a href="#">Cookies Policy</a>. 
+                    You may receive SMS notifications from us and can opt out at any time.
+                </p>
+
+                <button class="signup-btn">Sign Up</button>
+            </form>
+            <p class="already-account"><a href="index.html">Already have an account?</a></p>
+        </div>
+    </div>
+</body>
+</html>
