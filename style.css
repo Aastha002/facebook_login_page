@@ -1,139 +1,184 @@
-body {
-    font-family: Helvetica, Arial, sans-serif;
-    background-color: #f0f2f5;
-    text-align: center;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-.logo {
-    font-size: 40px;
-    font-weight: bold;
-    color: #1877f2;
-    margin-top: 30px;
-}
-
-.container {
+body {
+    background-color: #f0f2f5;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    height: 100vh;
     padding: 20px;
+}
+
+.logo {
+    font-size: 36px;
+    color: #1877f2;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 
 .login-box, .signup-box {
     background: white;
     padding: 20px;
     width: 100%;
-    max-width: 400px;
+    max-width: 360px;
+    text-align: center;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-.login-box h2, .signup-box h2 {
-    font-size: 20px;
-    margin-bottom: 15px;
-}
-
-input, select {
+input {
     width: 100%;
-    padding: 12px;
-    margin: 8px 0;
+    padding: 10px;
+    margin: 10px 0;
     border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 16px;
+    border-radius: 5px;
 }
 
-.login-btn, .signup-btn {
+button {
     width: 100%;
-    font-size: 18px;
+    padding: 10px;
+    color: white;
     border: none;
-    padding: 12px;
-    border-radius: 6px;
+    border-radius: 5px;
+    font-size: 16px;
     cursor: pointer;
-    margin-top: 10px;
 }
 
 .login-btn {
-    background: #1877f2;
-    color: white;
+    background-color: #1877f2;
 }
 
 .signup-btn {
-    background: #42b72a;
-    color: white;
+    background-color: #42b72a;
+    width: 180px;
+    padding: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    margin: 15px auto 10px;
 }
 
-.forgot-signup {
-    margin-top: 12px;
-    font-size: 14px;
-    text-align: center;
+.signup-btn:hover {
+    background-color: #36a420;
+}
+
+.login-title, .signup-title {
+    font-size: 22px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: #606770;
+}
+
+.bottom-links {
     display: flex;
     justify-content: center;
-    gap: 8px; 
+    align-items: center;
+    margin-top: 12px;
 }
 
-.forgot-signup a {
+.bottom-links a {
+    font-size: 14px;
     color: #1877f2;
     text-decoration: none;
 }
 
-.forgot-signup a:hover {
+.bottom-links span {
+    margin: 0 5px;
+    color: #606770;
+}
+
+.bottom-links a:hover {
     text-decoration: underline;
 }
 
-.name-fields {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+.section-title {
+    display: block;
+    text-align: left;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 10px 0 5px;
 }
 
-.name-fields input {
+.section-title span {
+    color: #65676B;
+    font-weight: normal;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.dob {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.dob select {
+    width: 32%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.gender {
+    display: flex;
+    justify-content: space-between;
+}
+
+.gender label {
     flex: 1;
-}
-
-.dob-fields, .gender-options {
     display: flex;
-    gap: 5px;
-    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-right: 5px;
 }
 
-.policy-text, .terms {
+.terms, .policy-text {
     font-size: 12px;
     color: #606770;
-    margin-top: 5px;
+    text-align: left;
 }
 
-.policy-text a, .terms a {
+.policy-text {
+    margin-bottom: 10px;
+}
+
+.login-link {
+    display: block;
+    text-align: center;
+    font-size: 14px;
     color: #1877f2;
     text-decoration: none;
+    margin-top: 20px;
 }
 
-@media (max-width: 600px) {
-    .logo {
-        font-size: 30px;
-    }
+.login-link:hover {
+    text-decoration: underline;
+}
 
-    .container {
-        padding: 10px;
+@media (max-width: 400px) {
+    .logo {
+        font-size: 32px;
     }
 
     .login-box, .signup-box {
         width: 90%;
     }
-
-    .name-fields {
-        flex-direction: column;
-    }
-
-    .dob-fields, .gender-options {
-        flex-direction: column;
-    }
-
-    input, select {
-        width: 100%;
-    }
 }
-
